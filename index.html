@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickTap — Tiny reflex game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="top">
+      <a class="logo" href="#" aria-label="QuickTap home"><span class="logo-dot"></span> quicktap</a>
+      <span class="tag">A tiny reflex game</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">READY, SET, TAP</p>
+      <h1>How quick are<br>your <span>reflexes?</span></h1>
+      <p class="sub">Tap the circle as many times as you can before the timer runs out.</p>
+    </section>
+
+    <section class="score-row" aria-label="Game statistics">
+      <div class="stat"><span class="stat-label">SCORE</span><strong id="score">00</strong></div>
+      <div class="stat"><span class="stat-label">TIME LEFT</span><strong id="time">15<span class="unit">s</span></strong></div>
+      <div class="stat"><span class="stat-label">BEST</span><strong id="best">00</strong></div>
+    </section>
+
+    <section class="arena" id="arena" aria-label="Game area">
+      <div class="arena-message" id="arenaMessage">
+        <div class="start-icon">↗</div>
+        <h2>One tap at a time.</h2>
+        <p>Hit start, then tap the moving target.</p>
+        <button class="start-btn" id="startBtn">Start game <span>→</span></button>
+      </div>
+      <button class="target hidden" id="target" aria-label="Tap target"></button>
+      <div class="countdown hidden" id="countdown">15</div>
+    </section>
+
+    <div class="bottom-row">
+      <p id="status">You’ve got 15 seconds. Make them count.</p>
+      <button class="reset-btn" id="resetBtn">↻ Reset</button>
+    </div>
+
+    <footer><span>Made for a quick break.</span><span>HTML · CSS · JS</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
